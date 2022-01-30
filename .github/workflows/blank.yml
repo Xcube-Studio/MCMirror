@@ -28,7 +28,7 @@ jobs:
           rm -rf *.jar
           rm -rf *.json
       - name: Run Application
-        run: .\Mirror
+        run: ./Mirror
       - name: Commit files
         run: |
          git config --local user.email "1903518149@qq.com"
