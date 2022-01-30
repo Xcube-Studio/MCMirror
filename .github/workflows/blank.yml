@@ -25,10 +25,10 @@ jobs:
           dotnet-version: 5.0.x
       - name: Clear Previous
         run: |
-          rm -rf *.jar
-          rm -rf *.json
+          sudo rm -rf *.jar
+          sudo rm -rf *.json
       - name: Run Application
-        run: ./Mirror
+        run: sudo ./Mirror
       - name: Commit files
         run: |
          git config --local user.email "1903518149@qq.com"
