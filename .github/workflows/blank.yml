@@ -7,14 +7,13 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   schedule:
   - cron: "0 0 * * *"
-  push:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -25,10 +24,10 @@ jobs:
           dotnet-version: 5.0.x
       - name: Clear Previous
         run: |
-          sudo rm -rf *.jar
-          sudo rm -rf *.json
+          del *.jar
+          del *.json
       - name: Run Application
-        run: sudo sh Mirror
+        run: .\Mirror.exe
       - name: Commit files
         run: |
          git config --local user.email "1903518149@qq.com"
