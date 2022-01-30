@@ -28,7 +28,7 @@ jobs:
           sudo rm -rf *.jar
           sudo rm -rf *.json
       - name: Run Application
-        run: sudo ./Mirror
+        run: sudo sh Mirror
       - name: Commit files
         run: |
          git config --local user.email "1903518149@qq.com"
