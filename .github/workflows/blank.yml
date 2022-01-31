@@ -24,7 +24,6 @@ jobs:
           dotnet-version: 5.0.x
       - name: Clear Previous
         run: |
-          del *.jar
           del *.json
       - name: Run Application
         run: .\Mirror.exe
